@@ -1,20 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Acceuil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+      <ion-card-title>ENSA FES</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div>
+        <ion-img src="{{contact.logo}}" style="width:345px;height:180px"></ion-img>
+      </div>
+
+      <ion-list>
+        <ion-item>{{contact.name}}</ion-item>
+        <ion-item>Email: {{contact.email}}</ion-item>
+        <ion-item>Telephone: <strong>{{contact.tel}}</strong> </ion-item>
+
+      </ion-list>
+
+      <div>
+        <ion-img [src]="contact.location" style="width:300px;height:200px"></ion-img>
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
 </ion-content>
